@@ -51,7 +51,10 @@ export function injectJsonLane(_body: Record<string, any>): boolean {
   return false;
 }
 
-export function injectArgsPad(_body: Record<string, any>): boolean {
+export function injectArgsPad(
+  _body: Record<string, any>,
+  _options?: { descHints?: boolean },
+): boolean {
   return false;
 }
 
@@ -65,7 +68,10 @@ export interface AdditionalToolPads {
   aliasOf?: Record<string, string>;
 }
 
-export function injectAdditionalToolPad(_body: Record<string, any>): AdditionalToolPads | null {
+export function injectAdditionalToolPad(
+  _body: Record<string, any>,
+  _options?: { descHints?: boolean },
+): AdditionalToolPads | null {
   return null;
 }
 
@@ -97,6 +103,7 @@ export interface AutoCutOpts {
   origBody: Record<string, any>;
   cleanEcho?: Record<string, any>;
   plainBody?: string;
+  retryBodies?: string[];
   jsonSchema?: boolean;
   padRequired?: Record<string, string[]>;
   codePad?: Set<string>;

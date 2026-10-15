@@ -9,3 +9,10 @@ ch-relay.*.exe
 .tmp/
 .bun-cache/
 .tmp-*.py
+.local/
+.runtime/
+*.sqlite-shm
+*.sqlite-wal
+.env
+.env.*
+!.env.example
